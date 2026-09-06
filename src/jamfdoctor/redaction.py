@@ -17,7 +17,7 @@ _RULES: list[tuple[re.Pattern[str], str]] = [
         re.compile(r"\b(?:[A-Za-z0-9-]+\.)+(?:org|com|net|edu|local|school|io|gov)\b"),
         "[REDACTED_HOST]",
     ),
-    (re.compile(r"(console|user|username|login)=('?)[^'\s)]+(\2)"), r"\1=\2[REDACTED_USER]\3"),
+    (re.compile(r"(console|user|username|login)=('{0,2})[^'\s)]+(\2)"), r"\1=\2[REDACTED_USER]\3"),
     (re.compile(r"(for user \")[^\"]+(\")"), r"\1[REDACTED_USER]\2"),
     (re.compile(r"/Users/[^/\s]+"), "/Users/[REDACTED_USER]"),
     (re.compile(r"\b[A-Z0-9]{10,12}\b"), "[REDACTED_SERIAL]"),

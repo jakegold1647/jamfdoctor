@@ -30,6 +30,11 @@ jamfdoctor policy policy-82.json               # a policy exported from the Clas
 jamfdoctor rules                               # the catalog
 ```
 
+`diagnose` accepts the log as plain text, or as the accessibility-tree snapshot a
+browser automation tool produces when it captures the log's Details view in Jamf
+Pro (lines that start with `- `, with the log in `cell "..."` nodes). Snapshots are
+detected by shape and unwrapped before parsing; the report says so in its header.
+
 The demo is a sanitized real case: a laptop that checked in from home, could not
 mount the file-share distribution point, and then watched two scripts fail for
 that one reason.

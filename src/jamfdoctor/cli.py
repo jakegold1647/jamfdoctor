@@ -17,7 +17,7 @@ import sys
 from importlib import resources
 from pathlib import Path
 
-from . import __version__, policyconfig, policylog, report, rules
+from . import __version__, policyconfig, policylog, report, rules, snapshot
 from .redaction import redact
 
 
@@ -33,12 +33,17 @@ def cmd_diagnose(args: argparse.Namespace) -> int:
     except OSError as error:
         print(f"jamfdoctor: cannot read {args.file}: {error}", file=sys.stderr)
         return 2
+    extracted = snapshot.extract_policy_log(text)
+    kind = "policy log"
+    if extracted is not None:
+        text = extracted
+        kind = "policy log from snapshot"
     if args.redact:
         text = redact(text)
     parsed = policylog.parse(text)
     findings = rules.diagnose(parsed)
     label = "stdin" if args.file == "-" else Path(args.file).name
-    sys.stdout.write(report.render(findings, args.format, label, "policy log"))
+    sys.stdout.write(report.render(findings, args.format, label, kind))
     return 0
 
 

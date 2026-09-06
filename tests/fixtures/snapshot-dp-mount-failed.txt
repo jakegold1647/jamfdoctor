@@ -1,0 +1,29 @@
+
+      - article:
+        - heading "Details" [level=2]
+        - button "" [active]
+        - main:
+          - table:
+            - rowgroup:
+              - row "Executing Policy Printer Driver Update (Macs)":
+                - cell "Executing Policy Printer Driver Update (Macs)"
+              - row "Mounting File Share":
+                - cell "Mounting File Share"
+              - row "Could not mount distribution point \"File Share\"":
+                - cell "Could not mount distribution point \"File Share\""
+              - row "Running script Install Vendor Find-Me Printer...":
+                - cell "Running script Install Vendor Find-Me Printer..."
+              - 'row "Script exit code: 1"':
+                - 'cell "Script exit code: 1"'
+              - row "Script result: 2026-09-06 05:37:31 ERROR: no PPD matching *IM*C4510* in /Library/Printers/PPDs/Contents/Resources.":
+                - cell "Script result: 2026-09-06 05:37:31 ERROR: no PPD matching *IM*C4510* in /Library/Printers/PPDs/Contents/Resources."
+              - row "Error running script: return code was 1.":
+                - cell "Error running script: return code was 1."
+              - row "Running script Vendor Find-Me Fallback (online link)...":
+                - cell "Running script Vendor Find-Me Fallback (online link)..."
+              - 'row "Script exit code: 10"':
+                - 'cell "Script exit code: 10"'
+              - row "Script result: 2026-09-06 05:37:31 [fallback] print server 'print-01' unreachable on 515/631 - Mac is probably off campus. Exiting 10 so Jamf retries at the next check-in.":
+                - cell "Script result: 2026-09-06 05:37:31 [fallback] print server 'print-01' unreachable on 515/631 - Mac is probably off campus. Exiting 10 so Jamf retries at the next check-in."
+              - row "Error running script: return code was 10.":
+                - cell "Error running script: return code was 10."

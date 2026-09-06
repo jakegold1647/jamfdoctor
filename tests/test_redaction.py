@@ -18,6 +18,13 @@ def test_redacts_hosts_users_emails_ips_urls():
     assert 'for user "[REDACTED_USER]"' in out
 
 
+def test_redacts_yaml_doubled_single_quotes_from_snapshots():
+    out = redact("server=''print-01.example.org'' console=''fs25-someone'' auth=''negotiate''")
+    assert "fs25-someone" not in out
+    assert "console=''[REDACTED_USER]''" in out
+    assert "[REDACTED_HOST]" in out
+
+
 def test_redaction_is_idempotent_and_deterministic():
     text = "console='jdoe' at 10.0.0.5 on host.example.org"
     once = redact(text)
