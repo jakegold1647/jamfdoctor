@@ -1,0 +1,8 @@
+Executing Policy Printer Driver Update (Macs)
+Mounting File Share
+Downloading Vendor_IM_C4510_Driver.pkg...
+Error: The package Vendor_IM_C4510_Driver.pkg could not be found on the distribution point.
+Running script Install Vendor Find-Me Printer...
+Script exit code: 1
+Script result: 2026-09-04 08:15:02  ERROR: no PPD matching *IM*C4510* in /Library/Printers/PPDs/Contents/Resources.
+Error running script: return code was 1.

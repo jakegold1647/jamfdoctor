@@ -1,0 +1,24 @@
+{
+  "policy": {
+    "general": {
+      "id": 7,
+      "name": "Old Onboarding",
+      "enabled": false,
+      "trigger_checkin": false,
+      "trigger_enrollment_complete": false,
+      "trigger_login": false,
+      "trigger_startup": false,
+      "trigger_other": "",
+      "frequency": "Once per computer",
+      "retry_event": "none",
+      "retry_attempts": -1
+    },
+    "scope": {"all_computers": false, "limitations": {"network_segments": []}},
+    "package_configuration": {
+      "packages": [{"id": 3, "name": "Tools.pkg", "action": "Install"}],
+      "distribution_point": "default"
+    },
+    "scripts": [{"id": 9, "name": "Prepare", "priority": "Before"}],
+    "self_service": {"use_for_self_service": false}
+  }
+}

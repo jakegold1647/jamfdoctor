@@ -1,0 +1,32 @@
+{
+  "policy": {
+    "general": {
+      "id": 82,
+      "name": "Printer Driver Update (Macs)",
+      "enabled": true,
+      "trigger_checkin": true,
+      "trigger_enrollment_complete": false,
+      "trigger_login": false,
+      "trigger_startup": false,
+      "trigger_other": "",
+      "frequency": "Once every week",
+      "retry_event": "none",
+      "retry_attempts": -1,
+      "notify_on_each_failed_retry": false
+    },
+    "scope": {
+      "all_computers": true,
+      "limitations": {"network_segments": []},
+      "exclusions": {}
+    },
+    "package_configuration": {
+      "packages": [{"id": 12, "name": "Vendor_IM_C4510_Driver.pkg", "action": "Install"}],
+      "distribution_point": "default"
+    },
+    "scripts": [
+      {"id": 2, "name": "Install Vendor Find-Me Printer", "priority": "After"},
+      {"id": 4, "name": "Vendor Find-Me Fallback (online link)", "priority": "After"}
+    ],
+    "self_service": {"use_for_self_service": false}
+  }
+}

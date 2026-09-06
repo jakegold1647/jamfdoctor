@@ -1,0 +1,13 @@
+Executing Policy Printer Driver Update (Macs)
+Mounting File Share
+Could not mount distribution point "File Share"
+Running script Install Vendor Find-Me Printer...
+Script exit code: 1
+Script result: 2026-09-06 05:37:31  === Vendor Mac install started (server='print-01.example.org' direct='' queue='Print-01-Find-Me-Color' share='Find_Me_Color' transport='auto' auth='negotiate' console='jdoe') ===
+2026-09-06 05:37:31  ERROR: no PPD matching *IM*C4510* in /Library/Printers/PPDs/Contents/Resources. Add 'Vendor_IM_C4510_Driver.pkg' to this Jamf policy with action Install, and run this script After the package.
+Error running script: return code was 1.
+Running script Vendor Find-Me Fallback (online link)...
+Script exit code: 10
+Script result: 2026-09-06 05:37:31  [fallback] === primary install did not deliver 'Print-01-Find-Me-Color'; using the online-link path ===
+2026-09-06 05:37:31  [fallback] print server 'print-01' unreachable on 515/631 - Mac is probably off campus. Exiting 10 so Jamf retries at the next check-in.
+Error running script: return code was 10.

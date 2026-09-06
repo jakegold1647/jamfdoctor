@@ -1,0 +1,11 @@
+Executing Policy Printer Driver Update (Macs)
+Mounting File Share
+Downloading Vendor_IM_C4510_Driver.pkg...
+Installing Vendor_IM_C4510_Driver.pkg...
+Successfully installed Vendor_IM_C4510_Driver.pkg.
+Running script Install Vendor Find-Me Printer...
+Script exit code: 0
+Script result: 2026-09-03 10:02:11  === Vendor Mac install started (server='print-01.example.org' queue='Print-01-Find-Me-Color') ===
+2026-09-03 10:02:12  queue 'Print-01-Find-Me-Color' created via lpd://print-01.example.org/Print-01-Find-Me-Color with PPD 'Vendor IM C4510'
+2026-09-03 10:02:12  SUCCESS
+Submitting log to https://jamf.example.org:8443/

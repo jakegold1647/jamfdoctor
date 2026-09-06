@@ -1,0 +1,5 @@
+Executing Policy Set Login Window Message
+Running script Set Login Window...
+Script exit code: 127
+Script result: /Library/Application Support/JAMF/tmp/set-login-window: line 12: defaultsx: command not found
+Error running script: return code was 127.
